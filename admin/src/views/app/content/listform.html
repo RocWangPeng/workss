@@ -1,0 +1,60 @@
+
+  <div class="layui-form" lay-filter="layuiadmin-app-form-list" id="layuiadmin-app-form-list" style="padding: 20px 30px 0 0;">
+    <div class="layui-form-item">
+      <label class="layui-form-label">项目标题</label>
+      <div class="layui-input-inline">
+        <script type="text/html" template>
+          <input type="text" name="title" value="{{ d.params.title || '' }}" lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+        </script>
+      </div>
+    </div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">项目副标题</label>
+			<div class="layui-input-inline">
+				<script type="text/html" template>
+					<input type="text" name="sub_title" value="{{ d.params.sub_title || '' }}" lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+				</script>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">缩略图地址</label>
+			<div class="layui-input-inline">
+				<script type="text/html" template>
+					<input type="text" name="thumb" value="{{ d.params.thumb || '' }}" lay-verify="required" placeholder="请输入缩略图地址" autocomplete="off" class="layui-input">
+				</script>
+			</div>
+		</div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">技术点</label>
+      <div class="layui-input-inline">
+        <script type="text/html" template>
+          <input type="text" name="skill" value="{{ d.params.skill || '' }}" lay-verify="required" placeholder="请输入技术点" autocomplete="off" class="layui-input">
+        </script>
+      </div>
+    </div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">详情地址</label>
+			<div class="layui-input-inline">
+				<script type="text/html" template>
+					<input type="text" name="detail_md" value="{{ d.params.detail_md || '' }}" lay-verify="required" placeholder="请输入详情地址" autocomplete="off" class="layui-input">
+				</script>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">排序号码</label>
+			<div class="layui-input-inline">
+				<script type="text/html" template>
+					<input type="text" name="sort" value="{{ d.params.sort || '' }}" lay-verify="required" placeholder="请输入排序号码" autocomplete="off" class="layui-input">
+				</script>
+			</div>
+		</div>
+    <script type="text/html" template>
+      <input type="hidden" name="id" value="{{ d.params._id || '' }}">
+    </script>
+    <div class="layui-form-item">
+      <label class="layui-form-label"></label>
+      <div class="layui-input-inline">
+        <input type="button" lay-submit lay-filter="layuiadmin-app-form-submit" value="确认" class="layui-btn">
+      </div>
+    </div>
+  </div>
